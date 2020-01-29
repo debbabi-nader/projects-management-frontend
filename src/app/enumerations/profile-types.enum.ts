@@ -1,0 +1,6 @@
+export enum ProfileTypesEnum {
+
+    ADMINISTRATOR = 'ADMINISTRATOR',
+    PROJECT_MANAGER = 'PROJECT_MANAGER'
+
+}
