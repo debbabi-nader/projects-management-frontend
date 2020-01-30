@@ -2,13 +2,24 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AdministratorComponent } from './administrator.component';
+import { UsersListComponent } from './users-list/users-list.component';
 
 
 const ADMINISTRATOR_ROUTES: Routes = [
     {
         path: '',
         component: AdministratorComponent,
-        children: []
+        children: [
+            {
+                path: 'users-list',
+                component: UsersListComponent
+            },
+            {
+                path: '**',
+                redirectTo: 'users-list',
+                pathMatch: 'full'
+            }
+        ]
     }
 ];
 

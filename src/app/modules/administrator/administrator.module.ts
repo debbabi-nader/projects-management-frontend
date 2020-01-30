@@ -5,11 +5,13 @@ import { AppLibrariesModule } from './../../app-libraries.module';
 import { AdministratorRoutingModule } from './administrator-routing.module';
 
 import { AdministratorComponent } from './administrator.component';
+import { UsersListComponent } from './users-list/users-list.component';
 
 
 @NgModule({
     declarations: [
-        AdministratorComponent
+        AdministratorComponent,
+        UsersListComponent
     ],
     imports: [
         CommonModule,
