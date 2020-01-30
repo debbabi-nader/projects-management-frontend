@@ -6,12 +6,14 @@ import { ProjectManagerRoutingModule } from './project-manager-routing.module';
 
 import { ProjectManagerComponent } from './project-manager.component';
 import { ProjectsListComponent } from './projects-list/projects-list.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
 
 
 @NgModule({
     declarations: [
         ProjectManagerComponent,
-        ProjectsListComponent
+        ProjectsListComponent,
+        ProjectDetailsComponent
     ],
     imports: [
         CommonModule,
