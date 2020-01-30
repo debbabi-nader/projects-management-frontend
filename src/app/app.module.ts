@@ -7,11 +7,13 @@ import { AppLibrariesModule } from './app-libraries.module';
 import { AppServicesModule } from './app-services.module';
 
 import { AppComponent } from './app.component';
+import { SignInComponent } from './pages/sign-in/sign-in.component';
 
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        SignInComponent
     ],
     imports: [
         BrowserModule,
