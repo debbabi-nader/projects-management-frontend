@@ -2,13 +2,24 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ProjectManagerComponent } from './project-manager.component';
+import { ProjectsListComponent } from './projects-list/projects-list.component';
 
 
 const PROJECT_MANAGER_ROUTES: Routes = [
     {
         path: '',
         component: ProjectManagerComponent,
-        children: []
+        children: [
+            {
+                path: 'projects-list',
+                component: ProjectsListComponent
+            },
+            {
+                path: '**',
+                redirectTo: 'projects-list',
+                pathMatch: 'full'
+            }
+        ]
     }
 ];
 

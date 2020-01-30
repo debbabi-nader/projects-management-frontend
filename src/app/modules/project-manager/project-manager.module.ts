@@ -5,11 +5,13 @@ import { AppLibrariesModule } from './../../app-libraries.module';
 import { ProjectManagerRoutingModule } from './project-manager-routing.module';
 
 import { ProjectManagerComponent } from './project-manager.component';
+import { ProjectsListComponent } from './projects-list/projects-list.component';
 
 
 @NgModule({
     declarations: [
-        ProjectManagerComponent
+        ProjectManagerComponent,
+        ProjectsListComponent
     ],
     imports: [
         CommonModule,
