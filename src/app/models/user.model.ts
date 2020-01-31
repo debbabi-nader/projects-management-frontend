@@ -6,6 +6,7 @@ export class User {
     id: string;
     profileType?: ProfileTypesEnum;
     email?: string;
+    password?: string;
     isActive?: string;
     firstName?: string;
     lastName?: string;

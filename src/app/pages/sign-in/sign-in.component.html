@@ -5,7 +5,7 @@
                 <mat-card-title>Welcome!</mat-card-title>
                 <mat-card-subtitle>to Projects Management</mat-card-subtitle>
             </mat-card-header>
-            <mat-progress-bar *ngIf="showLoader" mode="indeterminate" color="primary"></mat-progress-bar>
+            <mat-progress-bar *ngIf="showLoader" mode="indeterminate" color="accent"></mat-progress-bar>
             <mat-card-content>
                 <form [formGroup]="signInFormGroup">
                     <mat-form-field>
@@ -25,6 +25,7 @@
                 </form>
             </mat-card-content>
             <mat-card-actions>
+                <p class="clickable-text">New to Projects Management?<br><a routerLink="/sign-up">Create an account!</a></p>
                 <button mat-raised-button color="primary" (click)="onSignIn()" [disabled]="signInFormGroup.invalid || showLoader">SIGN IN</button>
             </mat-card-actions>
         </mat-card>

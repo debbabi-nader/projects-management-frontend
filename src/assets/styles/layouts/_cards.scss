@@ -36,5 +36,13 @@
         flex-direction: row;
         align-items: stretch;
         justify-content: flex-end;
+        position: relative;
+
+        .clickable-text {
+            margin-bottom: 0px;
+            position: absolute;
+            left: 24px;
+            bottom: 24px;
+        }
     }
 }
