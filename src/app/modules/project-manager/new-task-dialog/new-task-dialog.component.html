@@ -1,0 +1,28 @@
+<div class="dialog-header-container">
+
+    <h2 class="dialog-title">Add new task</h2>
+
+</div>
+
+<div class="dialog-content-container">
+    
+    <form [formGroup]="newTaskFormGroup">
+        <mat-form-field>
+            <mat-label>Task reference</mat-label>
+            <input matInput type="text" id="reference" formControlName="reference" required>
+            <mat-error *ngIf="newTaskFormGroup.get('reference').hasError('required')">This field is required</mat-error>
+            <mat-error *ngIf="newTaskFormGroup.get('reference').hasError('blank')">Task reference must have at least one none whitespace character</mat-error>
+            <mat-error *ngIf="newTaskFormGroup.get('reference').hasError('notUnique')">A task with the same reference already exists</mat-error>
+        </mat-form-field>
+    </form>
+
+</div>
+
+<div class="dialog-actions-container">
+
+    <div class="actions right">
+        <button mat-button (click)="onCancel()">CANCEL</button>
+        <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="newTaskFormGroup.invalid">SUBMIT</button>
+    </div>
+
+</div>

@@ -1,0 +1,53 @@
+<div class="project-reference">
+    <h1>{{ project.reference }}</h1>
+    <div class="project-menu-button-container" [matMenuTriggerFor]="projectMenu">
+        <mat-icon>more_vert</mat-icon>
+    </div>
+</div>
+<p class="project-creation-date">{{ project.createdAt | date: 'dd/MM/yyyy' }}</p>
+<h2 class="description-header">About</h2>
+<p class="project-description">{{ project.description }}</p>
+<h2 class="tasks-header">Tasks ({{ tasks ? tasks.length : 0 }})</h2>
+<div class="placeholder" *ngIf="!tasks || tasks.length <= 0">
+    <p>This project has no tasks yet! <a (click)="onAddNewTask()">Add a new task.</a></p>
+</div>
+<div class="cards-container" *ngIf="tasks && tasks.length > 0">
+    <div class="card-container">
+        <mat-card matRipple class="add-new-task-button-card" (click)="onAddNewTask()">
+            <mat-icon>add</mat-icon>
+            <span>Add a new task</span>
+        </mat-card>
+    </div>
+    <div class="card-container" *ngFor="let task of tasks; let i = index;">
+        <mat-card class="task-card">
+            <h3>{{ task.reference }}</h3>
+            <div class="task-menu-button-container" [matMenuTriggerFor]="taskMenu" [matMenuTriggerData]="{ taskIndex: i }">
+                <mat-icon>more_vert</mat-icon>
+            </div>
+            <mat-menu #taskMenu="matMenu">
+                <ng-template matMenuContent let-taskIndex="taskIndex">
+                    <button mat-menu-item (click)="onEditTask(taskIndex)">
+                        <mat-icon>create</mat-icon>
+                        <span>Edit task</span>
+                    </button>
+                    <button mat-menu-item (click)="onDeleteTask(taskIndex)">
+                        <mat-icon>clear</mat-icon>
+                        <span>Delete task</span>
+                    </button>
+                </ng-template>
+            </mat-menu>
+        </mat-card>
+    </div>
+</div>
+<mat-menu #projectMenu="matMenu">
+    <ng-template matMenuContent>
+        <button mat-menu-item (click)="onEditProject()">
+            <mat-icon>create</mat-icon>
+            <span>Edit project</span>
+        </button>
+        <button mat-menu-item (click)="onDeleteProject()">
+            <mat-icon>clear</mat-icon>
+            <span>Delete project</span>
+        </button>
+    </ng-template>
+</mat-menu>

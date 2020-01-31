@@ -18,11 +18,11 @@ export class TaskService {
         private http: HttpClient
     ) {}
 
-    getTasksByProjectId(id: string): Observable<Task> {
+    getTasksByProjectId(id: string): Observable<Task[]> {
 
         const URL = API_BASE_URL + API_ENDPOINTS.TASKS_RESOURCE_ENDPOINTS.TASKS_BY_PROJECT_ENDPOINT + '/' + id;
 
-        return this.http.get<Task>(URL, FETCHING_JSON_REQUESTS_HTTP_OPTIONS);
+        return this.http.get<Task[]>(URL, FETCHING_JSON_REQUESTS_HTTP_OPTIONS);
 
     }
 

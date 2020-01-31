@@ -1,0 +1,87 @@
+.project-reference {
+    position: relative;
+
+    h1 {
+        margin-bottom: 0px !important;
+    }
+
+    .project-menu-button-container {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.project-creation-date {
+    margin-bottom: 2em;
+}
+
+.description-header {
+    margin-bottom: 0px !important;
+}
+
+.project-description {
+    text-align: justify;
+    margin-bottom: 2em;
+}
+
+.tasks-header {
+    margin-bottom: 2em !important;
+}
+
+.placeholder {
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    .card-container {
+        padding: 12px;
+        box-sizing: border-box;
+        display: flex;
+
+        .add-new-task-button-card,
+        .task-card {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+
+            & > * {
+                display: block;
+            }
+        }
+
+        .add-new-task-button-card {
+            justify-content: flex-start;
+            align-items: center;
+            cursor: pointer;
+
+            span {
+                margin-left: 24px;
+            }
+        }
+
+        .task-card {
+
+            h3 {
+                flex: 1;
+                margin-bottom: 0px;
+            }
+
+            .task-menu-button-container {
+                cursor: pointer;
+            }
+        }
+    }
+}

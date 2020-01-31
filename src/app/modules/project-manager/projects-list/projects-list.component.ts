@@ -74,7 +74,7 @@ export class ProjectsListComponent implements OnInit {
 
     }
 
-    onEditProject(projectIndex: string) {
+    onEditProject(projectIndex: number) {
 
         const DIALOG_REF = this.dialog.open(
             EditProjectDialogComponent,
@@ -96,7 +96,7 @@ export class ProjectsListComponent implements OnInit {
 
     }
 
-    onDeleteProject(projectIndex: string) {
+    onDeleteProject(projectIndex: number) {
 
         const DIALOG_DATA: DialogData = {
             title: 'Delete a project',
