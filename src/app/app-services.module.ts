@@ -6,6 +6,7 @@ import { AuthenticationService } from './services/authentication.service';
 import { UserService } from './services/user.service';
 import { ProjectService } from './services/project.service';
 import { TaskService } from './services/task.service';
+import { LoaderService } from './services/loader.service';
 import { AuthorizationGuard } from './guards/authorization.guard';
 import { AuthenticationGuard } from './guards/authentication.guard';
 import { AuthenticationInterceptor } from './interceptors/authentication.interceptor';
@@ -19,6 +20,7 @@ import { ErrorInterceptor } from './interceptors/error.interceptor';
         UserService,
         ProjectService,
         TaskService,
+        LoaderService,
         AuthenticationGuard,
         AuthorizationGuard,
         { provide: HTTP_INTERCEPTORS, useClass: AuthenticationInterceptor, multi: true },
