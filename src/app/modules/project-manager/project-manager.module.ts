@@ -7,6 +7,8 @@ import { SharedModule } from './../shared/shared.module';
 
 import { ProjectManagerComponent } from './project-manager.component';
 import { ProjectsListComponent } from './projects-list/projects-list.component';
+import { NewProjectDialogComponent } from './new-project-dialog/new-project-dialog.component';
+import { EditProjectDialogComponent } from './edit-project-dialog/edit-project-dialog.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 
 
@@ -14,7 +16,13 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
     declarations: [
         ProjectManagerComponent,
         ProjectsListComponent,
+        NewProjectDialogComponent,
+        EditProjectDialogComponent,
         ProjectDetailsComponent
+    ],
+    entryComponents: [
+        NewProjectDialogComponent,
+        EditProjectDialogComponent
     ],
     imports: [
         CommonModule,

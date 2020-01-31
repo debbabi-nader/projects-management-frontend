@@ -5,3 +5,16 @@ html, body {
 body { 
     margin: 0;
 }
+
+a {
+    color: map-get($colors, primary-tint);
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1 {
+    margin-bottom: 2em !important;
+}

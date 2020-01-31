@@ -38,7 +38,7 @@ export class AuthenticationService {
 
     verifyToken(token: Token): Observable<void> {
 
-        const URL = AUTH_BASE_URL + AUTH_ENDPOINTS.SIGN_IN_ENDPOINT;
+        const URL = AUTH_BASE_URL + AUTH_ENDPOINTS.TOKEN_VERIFICATION_ENDPOINT;
 
         return this.http.post<void>(URL, token, MUTATING_JSON_REQUESTS_HTTP_OPTIONS);
 

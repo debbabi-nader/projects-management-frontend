@@ -1,0 +1,35 @@
+<div class="dialog-header-container">
+
+    <h2 class="dialog-title">Edit project</h2>
+
+</div>
+
+<div class="dialog-content-container">
+    
+    <form [formGroup]="editProjectFormGroup">
+        <mat-form-field>
+            <mat-label>Project reference</mat-label>
+            <input matInput type="text" id="reference" formControlName="reference" required (keyup)="detectInputChanges($event.target.id)">
+            <mat-error *ngIf="editProjectFormGroup.get('reference').hasError('required')">This field is required</mat-error>
+            <mat-error *ngIf="editProjectFormGroup.get('reference').hasError('blank')">Project reference must have at least one none whitespace character</mat-error>
+            <mat-error *ngIf="editProjectFormGroup.get('reference').hasError('notUnique')">A project with the same reference already exists</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Project description</mat-label>
+            <textarea matInput id="description" formControlName="description" rows="10" required (keyup)="detectInputChanges($event.target.id)"></textarea>
+            <mat-error *ngIf="editProjectFormGroup.get('description').hasError('required')">This field is required</mat-error>
+            <mat-error *ngIf="editProjectFormGroup.get('description').hasError('blank')">Project description must have at least one none whitespace character</mat-error>
+            <mat-error *ngIf="editProjectFormGroup.get('description').hasError('maxlength')">Please do not exceed 250 characters</mat-error>
+        </mat-form-field>
+    </form>
+
+</div>
+
+<div class="dialog-actions-container">
+
+    <div class="actions right">
+        <button mat-button (click)="onCancel()">CANCEL</button>
+        <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="editProjectFormGroup.invalid || !isFormChanged">SUBMIT</button>
+    </div>
+
+</div>

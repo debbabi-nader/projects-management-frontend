@@ -18,11 +18,11 @@ export class ProjectService {
         private http: HttpClient
     ) {}
 
-    getProjectsByManagerId(id: string): Observable<Project> {
+    getProjectsByManagerId(id: string): Observable<Project[]> {
 
         const URL = API_BASE_URL + API_ENDPOINTS.PROJECTS_RESOURCE_ENDPOINTS.PROJECTS_BY_MANAGER_ENDPOINT + '/' + id;
 
-        return this.http.get<Project>(URL, FETCHING_JSON_REQUESTS_HTTP_OPTIONS);
+        return this.http.get<Project[]>(URL, FETCHING_JSON_REQUESTS_HTTP_OPTIONS);
 
     }
 

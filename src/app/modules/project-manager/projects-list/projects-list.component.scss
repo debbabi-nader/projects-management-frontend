@@ -1,0 +1,58 @@
+.placeholder {
+    height: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .card-container {
+        min-width: 260px;
+        min-height: 180px;
+        padding: 12px;
+        box-sizing: border-box;
+        display: flex;
+
+        .add-new-project-button-card,
+        .project-card {
+            flex: 1;
+            position: relative;
+            cursor: pointer;
+        }
+
+
+        .add-new-project-button-card {
+
+            .button-card-content {
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                p {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        .project-card {
+
+            .project-menu-button-container {
+                pointer-events: visible;
+                position: absolute;
+                bottom: 8px;
+                right: 8px;
+            }
+        }
+    }
+}
