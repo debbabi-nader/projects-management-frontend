@@ -1,0 +1,8 @@
+mat-toolbar {
+    z-index: 5;
+    position: relative;
+
+    .fill-space {
+        flex: 1 1 auto;
+    }
+}

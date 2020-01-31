@@ -4,7 +4,15 @@
 // base
 @import 'base/reset';
 
+// components
+@import 'components/dialog';
+@import 'components/progress-bars';
+@import 'components/toolbar-user-avatar';
+
 // layouts
+@import 'layouts/app-layout';
 @import 'layouts/cards';
 @import 'layouts/forms';
+@import 'layouts/overlays';
 @import 'layouts/page-layout';
+@import 'layouts/toolbar';

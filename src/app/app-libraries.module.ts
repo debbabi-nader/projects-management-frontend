@@ -9,6 +9,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
         MatInputModule,
         MatButtonModule,
         MatIconModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatToolbarModule,
+        MatMenuModule,
+        MatDialogModule
     ],
     exports: [
         ReactiveFormsModule,
@@ -32,7 +38,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
         MatInputModule,
         MatButtonModule,
         MatIconModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatToolbarModule,
+        MatMenuModule,
+        MatDialogModule
     ],
     providers: [
         { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 5000, horizontalPosition: 'end', verticalPosition: 'top' } }

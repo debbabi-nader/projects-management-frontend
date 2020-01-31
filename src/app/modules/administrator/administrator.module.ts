@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AppLibrariesModule } from './../../app-libraries.module';
 import { AdministratorRoutingModule } from './administrator-routing.module';
+import { SharedModule } from './../shared/shared.module';
 
 import { AdministratorComponent } from './administrator.component';
 import { UsersListComponent } from './users-list/users-list.component';
@@ -16,7 +17,8 @@ import { UsersListComponent } from './users-list/users-list.component';
     imports: [
         CommonModule,
         AppLibrariesModule,
-        AdministratorRoutingModule
+        AdministratorRoutingModule,
+        SharedModule
     ]
 })
 export class AdministratorModule { }
