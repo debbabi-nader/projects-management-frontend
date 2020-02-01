@@ -28,4 +28,12 @@ export class UserService {
 
     }
 
+    getUsers(): Observable<User[]> {
+
+        const URL = API_BASE_URL + API_ENDPOINTS.USERS_RESOURCE_ENDPOINTS.BASE_ENDPOINT;
+
+        return this.http.get<User[]>(URL, FETCHING_JSON_REQUESTS_HTTP_OPTIONS);
+
+    }
+
 }
